@@ -67,7 +67,7 @@ public class Auto_Getclose_ReleaseHatch extends Command {
      
       double steering_adjust = map(Kp * heading_error,-27,27,-1,1);
 
-      double distance_error= map(Kp * fix_distance,HEIGHT_DIFFERENCE*Math.tan(17),HEIGHT_DIFFERENCE*Math.tan(0),-1,1);
+      double distance_error= map(fix_distance,HEIGHT_DIFFERENCE*Math.tan(17),HEIGHT_DIFFERENCE*Math.tan(0),-1,1);
       double distance_adjust=Kp * distance_error;
       if(x>1)
         steering_adjust-=min_command;
